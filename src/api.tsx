@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const uploadKycData = async ( formData) => {
     try {
-        const response = await axios.post('http://localhost:3000/aadhaar/extraction', formData, {
+        const response = await axios.post('signzy-kyc-demo-le4f-5bnoh7om9-umars-projects-efb18afc.vercel.app/aadhaar/extraction', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',  // For file uploads
             },
@@ -19,7 +19,7 @@ export const uploadKycData = async ( formData) => {
 
 export const faceMatch = async (data)=>{
     try {
-        const response = await axios.post('http://localhost:3000/facematch', data, {
+        const response = await axios.post('signzy-kyc-demo-le4f-5bnoh7om9-umars-projects-efb18afc.vercel.app/facematch', data, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
