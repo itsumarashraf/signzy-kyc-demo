@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const uploadKycData = async (kycFor, formData) => {
+export const uploadKycData = async ( formData) => {
     try {
         const response = await axios.post('http://localhost:3000/aadhaar/extraction', formData, {
             headers: {

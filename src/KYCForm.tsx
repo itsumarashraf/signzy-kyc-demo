@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import Webcam from 'react-webcam';
 import { faceMatch, uploadKycData } from './api';
 
@@ -62,7 +62,7 @@ const KYCForm = ({ kycType, resetKycType }) => {
         formData.append('backDocument', backDocumentFile);
 
         try {
-            const response = await uploadKycData(kycType, formData);
+            const response = await uploadKycData(formData);
             if(response?.error){
                 alert('Something is wong with your adhaar')
                 resetKycType();
